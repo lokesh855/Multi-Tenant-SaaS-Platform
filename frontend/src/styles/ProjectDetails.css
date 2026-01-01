@@ -1,0 +1,274 @@
+/* ============================================
+   PROJECT DETAILS PAGE STYLES - MODERN DESIGN
+   ============================================ */
+
+.project-details {
+  padding: var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 60px;
+  background: var(--color-bg);
+  min-height: 100vh;
+}
+
+.project-header {
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+  box-shadow: 0 2px 8px rgba(47, 62, 70, 0.06);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-base);
+}
+
+.project-header:hover {
+  box-shadow: 0 6px 16px rgba(143, 211, 218, 0.12);
+  border-color: var(--color-primary);
+}
+
+.project-header h2 {
+  margin: 0 0 var(--spacing-md) 0;
+  font-size: var(--font-size-2xl);
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
+}
+
+.project-header p {
+  margin: var(--spacing-sm) 0;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  font-size: var(--font-size-base);
+}
+
+.project-header .badges {
+  margin-top: var(--spacing-lg);
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.project-header .status {
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: capitalize;
+}
+
+.status.active {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--color-primary);
+}
+
+.status.completed {
+  background: rgba(22, 163, 74, 0.1);
+  color: var(--color-success);
+}
+
+.status.archived {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--color-warning);
+}
+
+/* ============================================
+   TASK HEADER
+   ============================================ */
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.task-header h3 {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
+}
+
+.task-header button {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-fast);
+  font-family: var(--font-family);
+  box-shadow: var(--shadow-sm);
+}
+
+.task-header button:hover {
+  background: var(--color-primary-dark);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   TASK GRID
+   ============================================ */
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.task-card {
+  background: var(--color-bg-secondary);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 8px rgba(47, 62, 70, 0.06);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  transition: all var(--transition-base);
+}
+
+.task-card:hover {
+  box-shadow: 0 6px 16px rgba(143, 211, 218, 0.12);
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+}
+
+.task-card h4 {
+  margin: 0;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
+}
+
+.task-card p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.task-card .badges {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.task-card .status,
+.task-card .priority {
+  font-size: var(--font-size-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  text-transform: capitalize;
+  font-weight: var(--font-weight-semibold);
+}
+
+.status.todo {
+  background: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+}
+
+.status.in_progress {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--color-primary);
+}
+
+.status.completed {
+  background: rgba(22, 163, 74, 0.1);
+  color: var(--color-success);
+}
+
+.priority.low {
+  background: rgba(22, 163, 74, 0.1);
+  color: var(--color-success);
+}
+
+.priority.medium {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--color-warning);
+}
+
+.priority.high {
+  background: rgba(220, 38, 38, 0.1);
+  color: var(--color-error);
+}
+
+.task-actions {
+  margin-top: auto;
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.task-actions button {
+  flex: 1;
+  padding: var(--spacing-sm);
+  font-size: var(--font-size-xs);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-family);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.task-actions button:hover {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-primary);
+}
+
+.task-actions button.danger {
+  background: rgba(220, 38, 38, 0.1);
+  color: var(--color-error);
+  border-color: var(--color-error);
+}
+
+.task-actions button.danger:hover {
+  background: var(--color-error);
+  color: white;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .project-details {
+    padding: var(--spacing-lg);
+    margin-top: 70px;
+  }
+
+  .task-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+
+  .task-header button {
+    width: 100%;
+  }
+
+  .task-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .project-details {
+    padding: var(--spacing-md);
+  }
+
+  .project-header {
+    padding: var(--spacing-lg);
+  }
+
+  .project-header h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  .task-card {
+    padding: var(--spacing-md);
+  }
+} 

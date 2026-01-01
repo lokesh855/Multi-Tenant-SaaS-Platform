@@ -1,0 +1,274 @@
+/* ============================================
+   PROJECTS LIST PAGE STYLES - MODERN DESIGN
+   ============================================ */
+
+.projects-container {
+  padding: var(--spacing-xl);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  margin-top: 60px;
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2xl);
+  gap: var(--spacing-lg);
+}
+
+.projects-header h1,
+.projects-header h2 {
+  margin: 0;
+  font-size: var(--font-size-2xl);
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
+}
+
+.create-btn {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: var(--font-weight-semibold);
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  white-space: nowrap;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+}
+
+.create-btn:hover {
+  background-color: var(--color-primary-dark);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.create-btn:active {
+  transform: translateY(0);
+}
+
+.projects-filters {
+  margin-bottom: var(--spacing-xl);
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.projects-filters input,
+.projects-filters select {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-secondary);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family);
+  color: var(--color-text);
+  transition: all var(--transition-fast);
+  flex: 1;
+  min-width: 200px;
+}
+
+.projects-filters input:focus,
+.projects-filters select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(143, 211, 218, 0.1);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.project-card {
+  padding: var(--spacing-xl);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+}
+
+.project-info h3 {
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+#description {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--spacing-md) 0;
+  line-height: 1.6;
+}
+
+.badges {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin: var(--spacing-md) 0;
+  flex-wrap: wrap;
+}
+
+.status {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  text-transform: capitalize;
+  color: white;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.status.active {
+  background-color: var(--color-success);
+}
+
+.status.archived {
+  background-color: var(--color-warning);
+}
+
+.status.completed {
+  background-color: var(--color-primary);
+}
+
+.task-count {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.project-info small {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  margin-top: var(--spacing-md);
+}
+
+.project-actions {
+  margin-top: var(--spacing-lg);
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.project-actions button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-fast);
+  font-family: var(--font-family);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  flex: 1;
+  min-width: 100px;
+}
+
+.project-actions button:hover {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-primary);
+}
+
+.project-actions .delete {
+  background-color: rgba(220, 38, 38, 0.1);
+  color: var(--color-error);
+  border-color: var(--color-error);
+}
+
+.project-actions .delete:hover {
+  background-color: var(--color-error);
+  color: white;
+}
+
+.error {
+  color: var(--color-error);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  padding: var(--spacing-lg);
+  background-color: rgba(220, 38, 38, 0.1);
+  border-radius: var(--radius-md);
+  margin-top: var(--spacing-lg);
+}
+
+.empty {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .projects-container {
+    padding: var(--spacing-lg);
+    margin-top: 70px;
+  }
+
+  .projects-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+
+  .create-btn {
+    width: 100%;
+  }
+
+  .projects-filters {
+    flex-direction: column;
+  }
+
+  .projects-filters input,
+  .projects-filters select {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-container {
+    padding: var(--spacing-md);
+  }
+
+  .projects-header h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  .project-card {
+    padding: var(--spacing-lg);
+  }
+
+  .project-actions {
+    flex-direction: column;
+  }
+
+  .project-actions button {
+    width: 100%;
+  }
+}

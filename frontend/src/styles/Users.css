@@ -1,0 +1,121 @@
+/* ============================================
+   USERS PAGE STYLES - MODERN DESIGN
+   ============================================ */
+
+.users-page {
+  padding: var(--spacing-xl);
+  margin: 0 auto;
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  margin-top: 60px;
+}
+
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2xl);
+  gap: var(--spacing-lg);
+}
+
+.users-header h2 {
+  margin: 0;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.users-header button {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-family);
+  white-space: nowrap;
+}
+
+.users-header button:hover {
+  background-color: var(--color-primary-dark);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.users-filters {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.users-filters input,
+.users-filters select {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background-color: var(--color-bg-secondary);
+  min-width: 200px;
+  transition: all var(--transition-fast);
+}
+
+.users-filters input:focus,
+.users-filters select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(143, 211, 218, 0.1);
+}
+
+.users-page p {
+  text-align: center;
+  color: var(--color-text-secondary);
+  padding: var(--spacing-2xl);
+  font-size: var(--font-size-base);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .users-page {
+    padding: var(--spacing-lg);
+    margin-top: 70px;
+  }
+
+  .users-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .users-header button {
+    width: 100%;
+  }
+
+  .users-filters {
+    flex-direction: column;
+  }
+
+  .users-filters input,
+  .users-filters select {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 640px) {
+  .users-page {
+    padding: var(--spacing-md);
+  }
+
+  .users-header h2 {
+    font-size: var(--font-size-xl);
+  }
+}

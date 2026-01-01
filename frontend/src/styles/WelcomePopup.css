@@ -1,0 +1,127 @@
+/* ============================================
+   WELCOME POPUP STYLES
+   ============================================ */
+
+.welcome-popup {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  animation: slideInRight var(--transition-base);
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.popup-content {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 8px 24px rgba(143, 211, 218, 0.2);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  max-width: 320px;
+  animation: popupFadeOut 0.5s var(--transition-base) 4.5s forwards;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes popupFadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+.popup-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.popup-text {
+  flex: 1;
+  margin: 0;
+}
+
+.popup-text h3 {
+  margin: 0 0 4px 0;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+}
+
+.popup-text p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: var(--font-weight-medium);
+}
+
+.popup-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: var(--color-white);
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+}
+
+.popup-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.popup-close:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 640px) {
+  .welcome-popup {
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+  }
+
+  .popup-content {
+    padding: var(--spacing-lg);
+    max-width: 100%;
+  }
+
+  .popup-icon {
+    font-size: 28px;
+  }
+
+  .popup-text h3 {
+    font-size: var(--font-size-sm);
+  }
+
+  .popup-text p {
+    font-size: 12px;
+  }
+}

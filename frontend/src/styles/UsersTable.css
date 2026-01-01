@@ -1,0 +1,105 @@
+/* ============================================
+   USERS TABLE STYLES
+   ============================================ */
+
+.users-list {
+  padding: var(--spacing-xl);
+}
+
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+  gap: var(--spacing-lg);
+}
+
+.users-header h1 {
+  font-size: var(--font-size-2xl);
+  margin: 0;
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
+}
+
+.users-header button {
+  padding: var(--spacing-md) var(--spacing-lg);
+  cursor: pointer;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.users-header button:hover {
+  background-color: var(--color-primary-dark);
+  box-shadow: var(--shadow-md);
+}
+
+#buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.filters {
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.filters input,
+.filters select {
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-family);
+  transition: border-color var(--transition-fast);
+  min-width: 200px;
+}
+
+.filters input:focus,
+.filters select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.users-table th,
+.users-table td {
+  padding: var(--spacing-lg);
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.role-badge {
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.role-badge.user {
+  background-color: #3498db;
+}
+
+.role-badge.tenant_admin {
+  background-color: #e67e22;
+}
+
+.error {
+  color: red;
+}
