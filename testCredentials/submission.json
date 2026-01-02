@@ -1,0 +1,82 @@
+{
+  "testCredentials": {
+    "superAdmin": {
+      "email": "superadmin@system.com",
+      "password": "Admin@123",
+      "role": "super_admin",
+      "tenantId": null
+    },
+    "tenants": [
+      {
+        "name": "Demo Company",
+        "subdomain": "demo",
+        "status": "active",
+        "subscriptionPlan": "pro",
+        "admin": {
+          "email": "admin@demo.com",
+          "password": "Demo@123",
+          "role": "tenant_admin"
+        },
+        "users": [
+          {
+            "email": "user1@demo.com",
+            "password": "User@123",
+            "role": "user"
+          },
+          {
+            "email": "user2@demo.com",
+            "password": "User@123",
+            "role": "user"
+          }
+        ],
+        "projects": [
+          {
+            "name": "Project Alpha",
+            "description": "First demo project",
+            "status":"active",
+            "tasks" : [
+              {
+              "title": "Design UI",
+              "description":"Create initial UI designs",
+              "status":"todo",
+              "priority":"high"
+              },
+              {
+              "title": "Setup Backend",
+              "description":"Initialize backend services",
+              "status":"in_progress",
+              "priority":"high"
+              }
+
+            ]
+          },
+          {
+            "name": "Project Beta",
+            "description": "Second demo project",
+            "status":"active",
+            "tasks" : [
+              {
+              "title": "Create Database Schema",
+              "description":"Design database tables",
+              "status":"completed",
+              "priority":"medium"
+              },
+              {
+              "title": "API Integration",
+              "description":"Integrate frontend with APIs",
+              "status":"todo",
+              "priority":"medium"
+              },
+              {
+              "title": "Testing",
+              "description":"Perform application testing",
+              "status":"todo",
+              "priority":"low"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
