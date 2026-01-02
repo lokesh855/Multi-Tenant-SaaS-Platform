@@ -3,7 +3,7 @@
 import axios from "axios";
 
 export const API = axios.create({
-  baseURL: "https://backend-production-6f02.up.railway.app/api",
+  baseURL: "https://backend-sass.up.railway.app/api",
 });
 
 
