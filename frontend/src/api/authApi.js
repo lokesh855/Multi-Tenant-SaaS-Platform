@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const API = axios.create({
-  baseURL: "https://backend-production-ef14.up.railway.app/api",
+  baseURL: "https://multi-tenant-saa-s-platform.vercel.app/api",
 });
 
 
