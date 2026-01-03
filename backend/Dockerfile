@@ -9,7 +9,8 @@ RUN npm install
 
 COPY . .
 
-RUN chmod +x entrypoint.sh
+RUN chmod +x entrypoint.sh && \
+    dos2unix entrypoint.sh || sed -i 's/\r$//' entrypoint.sh
 
 EXPOSE 5000
 
