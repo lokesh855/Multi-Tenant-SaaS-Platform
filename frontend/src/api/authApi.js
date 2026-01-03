@@ -4,7 +4,7 @@ import axios from "axios";
 
 export const API = axios.create({
 
-  baseURL: "https://backend-production-ff56.up.railway.app/api" || import.meta.env.VITE_API_URL,
+  baseURL: "http://localhost:5000/api" || import.meta.env.VITE_API_URL,
 
 });
 
